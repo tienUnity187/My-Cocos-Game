@@ -1,0 +1,328 @@
+
+anim-sym-red-planet.png
+size: 2011,1908
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Earth_FX/FX (1)
+  rotate: false
+  xy: 1, 927
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (10)
+  rotate: false
+  xy: 650, 1587
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (11)
+  rotate: false
+  xy: 650, 1265
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (12)
+  rotate: false
+  xy: 645, 621
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (13)
+  rotate: false
+  xy: 645, 299
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (14)
+  rotate: false
+  xy: 967, 943
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (15)
+  rotate: false
+  xy: 972, 1587
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (16)
+  rotate: false
+  xy: 972, 1265
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (17)
+  rotate: false
+  xy: 967, 621
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (20)
+  rotate: false
+  xy: 967, 621
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (25)
+  rotate: false
+  xy: 967, 621
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (18)
+  rotate: false
+  xy: 967, 299
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (19)
+  rotate: false
+  xy: 1289, 943
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (2)
+  rotate: false
+  xy: 1, 605
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (21)
+  rotate: false
+  xy: 1294, 1587
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (22)
+  rotate: false
+  xy: 1294, 1265
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (23)
+  rotate: false
+  xy: 1289, 621
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (24)
+  rotate: false
+  xy: 1289, 299
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (3)
+  rotate: false
+  xy: 1, 283
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (4)
+  rotate: false
+  xy: 323, 927
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (5)
+  rotate: false
+  xy: 323, 605
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (6)
+  rotate: false
+  xy: 323, 283
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (7)
+  rotate: false
+  xy: 328, 1587
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (8)
+  rotate: false
+  xy: 328, 1265
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Earth_FX/FX (9)
+  rotate: false
+  xy: 645, 943
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (1)
+  rotate: true
+  xy: 1616, 1688
+  size: 219, 246
+  orig: 219, 246
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (10)
+  rotate: true
+  xy: 1527, 52
+  size: 245, 236
+  orig: 245, 236
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (11)
+  rotate: true
+  xy: 1290, 40
+  size: 257, 235
+  orig: 257, 235
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (12)
+  rotate: true
+  xy: 1050, 23
+  size: 274, 238
+  orig: 274, 238
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (13)
+  rotate: true
+  xy: 255, 1
+  size: 280, 241
+  orig: 280, 241
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (14)
+  rotate: true
+  xy: 1, 9
+  size: 272, 252
+  orig: 272, 252
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (15)
+  rotate: true
+  xy: 498, 14
+  size: 267, 252
+  orig: 267, 252
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (3)
+  rotate: false
+  xy: 1864, 1789
+  size: 146, 118
+  orig: 146, 118
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (4)
+  rotate: true
+  xy: 1852, 1513
+  size: 173, 142
+  orig: 173, 142
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (5)
+  rotate: true
+  xy: 1765, 7
+  size: 194, 189
+  orig: 194, 189
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (6)
+  rotate: true
+  xy: 1765, 595
+  size: 209, 210
+  orig: 209, 210
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (7)
+  rotate: true
+  xy: 1765, 806
+  size: 221, 226
+  orig: 221, 226
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (8)
+  rotate: true
+  xy: 1616, 1457
+  size: 229, 234
+  orig: 229, 234
+  offset: 0, 0
+  index: -1
+Effect/Electric10 (9)
+  rotate: true
+  xy: 1611, 1029
+  size: 234, 237
+  orig: 234, 237
+  offset: 0, 0
+  index: -1
+Symbol/Hole_RED
+  rotate: true
+  xy: 1, 1579
+  size: 328, 325
+  orig: 328, 325
+  offset: 0, 0
+  index: -1
+Symbol/Selective Color 1
+  rotate: false
+  xy: 752, 1
+  size: 296, 296
+  orig: 296, 296
+  offset: 0, 0
+  index: -1
+Symbol/Symbol_21_EarthRED
+  rotate: false
+  xy: 1611, 399
+  size: 194, 194
+  orig: 194, 194
+  offset: 0, 0
+  index: -1
+Symbol/Symbol_22_Cover
+  rotate: false
+  xy: 1616, 1279
+  size: 272, 176
+  orig: 272, 176
+  offset: 0, 0
+  index: -1
+Symbol/Symbol_22_EarthRed
+  rotate: false
+  xy: 1765, 203
+  size: 194, 194
+  orig: 194, 194
+  offset: 0, 0
+  index: -1
+Symbol/Symbol_22_EarthRedmaga
+  rotate: false
+  xy: 1807, 399
+  size: 194, 194
+  orig: 194, 194
+  offset: 0, 0
+  index: -1
+Symbol/Symbol_22_Effect (2)
+  rotate: true
+  xy: 1, 1249
+  size: 328, 325
+  orig: 328, 325
+  offset: 0, 0
+  index: -1

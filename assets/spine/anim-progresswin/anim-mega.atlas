@@ -1,0 +1,83 @@
+
+anim-mega.png
+size: 1742,1062
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Backlight-mega
+  rotate: false
+  xy: 675, 2
+  size: 363, 363
+  orig: 391, 394
+  offset: 15, 19
+  index: -1
+Backlight2-super
+  rotate: false
+  xy: 812, 409
+  size: 651, 651
+  orig: 766, 656
+  offset: 58, 2
+  index: -1
+EPIC
+  rotate: false
+  xy: 1040, 163
+  size: 304, 123
+  orig: 1536, 864
+  offset: 460, 512
+  index: -1
+Glow-mega
+  rotate: false
+  xy: 2, 367
+  size: 808, 693
+  orig: 908, 767
+  offset: 50, 48
+  index: -1
+MEGA
+  rotate: false
+  xy: 1040, 288
+  size: 379, 119
+  orig: 1536, 864
+  offset: 385, 517
+  index: -1
+WIN-EPIC
+  rotate: false
+  xy: 1421, 277
+  size: 261, 119
+  orig: 1536, 864
+  offset: 771, 514
+  index: -1
+WIN-MEGA
+  rotate: false
+  xy: 1040, 41
+  size: 261, 120
+  orig: 1536, 864
+  offset: 770, 518
+  index: -1
+frame
+  rotate: false
+  xy: 2, 61
+  size: 671, 151
+  orig: 671, 151
+  offset: 0, 0
+  index: -1
+frame2
+  rotate: false
+  xy: 2, 214
+  size: 671, 151
+  orig: 671, 151
+  offset: 0, 0
+  index: -1
+frame3
+  rotate: true
+  xy: 1465, 398
+  size: 662, 150
+  orig: 662, 150
+  offset: 0, 0
+  index: -1
+megawin
+  rotate: true
+  xy: 1617, 422
+  size: 638, 123
+  orig: 638, 124
+  offset: 0, 1
+  index: -1
