@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -21,26 +21,6 @@
     <link rel="icon" href="favicon.ico"/>
     <style>html{overflow:hidden;width:100%;height:100%}body{position:fixed!important;top:0!important;left:0!important;width:100%!important;height:100%!important;padding:0!important;border:0!important;margin:0!important;overflow:hidden!important;background-color:#000!important;display:flex!important;justify-content:center!important;align-items:center!important}.header,.footer{display:none!important}#GameDiv{overflow:hidden!important;flex-shrink:0!important;border:none!important;border-radius:0!important;box-shadow:none!important}#Cocos3dGameContainer,#GameCanvas{width:100%!important;height:100%!important}</style>
 <script type="text/javascript">(function(){var R_LAND=16/9,R_PORT=9/16;function fit(){var vw=window.innerWidth,vh=window.innerHeight,w,h;var R=vh>vw?R_PORT:R_LAND;if(vw/vh>R){h=vh;w=Math.round(vh*R);}else{w=vw;h=Math.round(vw/R);}var d=document.getElementById('GameDiv');if(d){d.style.width=w+'px';d.style.height=h+'px';}}document.addEventListener('DOMContentLoaded',fit);window.addEventListener('resize',fit);window.addEventListener('orientationchange',function(){setTimeout(fit,200);});}());</script>
-      <style id="splash-style">
-      #GameDiv { position: relative; }
-      #splash-overlay {
-        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-        background: #000; display: flex; flex-direction: column;
-        justify-content: center; align-items: center;
-        z-index: 9999; pointer-events: none; }
-      #splash-logo { max-width: 280px; max-height: 160px; margin-bottom: 32px;
-        animation: splash-breathe 1.8s ease-in-out infinite; }
-      @keyframes splash-breathe {
-        0%,100%{ transform:scale(1); opacity:0.9; }
-        50%{ transform:scale(1.04); opacity:1; } }
-      #splash-bar-track { width:220px; height:4px;
-        background:rgba(255,255,255,0.12); border-radius:2px; overflow:hidden; }
-      #splash-bar { width:0%; height:100%;
-        background:linear-gradient(90deg,#f7971e,#ffd200);
-        border-radius:2px; transition:width 0.3s ease; }
-      #splash-text { color:rgba(255,255,255,0.45); font-family:Arial,sans-serif;
-        font-size:12px; margin-top:14px; }
-    </style>
   </head>
   <body>
     <h1 class="header">SuperNova</h1>
@@ -48,11 +28,6 @@
     <div id="GameDiv" cc_exact_fit_screen="false">
       <div id="Cocos3dGameContainer">
         <canvas id="GameCanvas" width="1920" height="1080" tabindex="99"></canvas>
-      </div>
-      <div id="splash-overlay">
-        <img id="splash-logo" src="splash-logo.png" alt="" onerror="this.style.display='none'"/>
-        <div id="splash-bar-track"><div id="splash-bar"></div></div>
-        <div id="splash-text">Loading...</div>
       </div>
     </div>
     <p class="footer">
@@ -70,38 +45,7 @@
 <script src="src/import-map.194b6.json" type="systemjs-importmap" charset="utf-8"> </script>
 
 <script>
-    System.import('./index.8f534.js').catch(function(err) { console.error(err); })
+    System.import('./index.b722a.js').catch(function(err) { console.error(err); })
 </script>
-  <script>
-(function(){
-  var bar=document.getElementById("splash-bar");
-  var overlay=document.getElementById("splash-overlay");
-  if(!bar||!overlay) return;
-  var progress=0,checkReady;
-  var timer=setInterval(function(){
-    progress+=(90-progress)*0.03;
-    bar.style.width=Math.min(progress,90)+"%";
-  },50);
-  window.__removeSplash=function(){
-    clearInterval(timer);clearInterval(checkReady);
-    bar.style.width="100%";
-    setTimeout(function(){
-      overlay.style.transition="opacity 0.4s ease";
-      overlay.style.opacity="0";
-      setTimeout(function(){if(overlay.parentNode)overlay.remove();},500);
-    },200);
-  };
-  checkReady=setInterval(function(){
-    try{if(window.cc&&window.cc.director&&window.cc.director.getScene())window.__removeSplash();}catch(e){}
-  },150);
-  setTimeout(function(){
-    clearInterval(timer);clearInterval(checkReady);
-    if(overlay&&overlay.parentNode){
-      overlay.style.transition="opacity 0.4s ease";overlay.style.opacity="0";
-      setTimeout(function(){if(overlay.parentNode)overlay.remove();},500);
-    }
-  },15000);
-})();
-</script>
-</body>
+  </body>
 </html>
