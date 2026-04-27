@@ -1,0 +1,188 @@
+
+anim-sym-barx2.png
+size: 1713,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Effect/Electric8 (1)
+  rotate: false
+  xy: 804, 104
+  size: 20, 20
+  orig: 26, 27
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (10)
+  rotate: true
+  xy: 126, 3
+  size: 264, 120
+  orig: 270, 126
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (11)
+  rotate: false
+  xy: 1033, 8
+  size: 268, 128
+  orig: 274, 134
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (12)
+  rotate: false
+  xy: 1098, 139
+  size: 267, 128
+  orig: 273, 134
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (13)
+  rotate: false
+  xy: 1303, 13
+  size: 267, 124
+  orig: 274, 130
+  offset: 4, 3
+  index: -1
+Effect/Electric8 (3)
+  rotate: true
+  xy: 1006, 138
+  size: 129, 90
+  orig: 135, 97
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (5)
+  rotate: true
+  xy: 477, 71
+  size: 196, 123
+  orig: 204, 129
+  offset: 4, 3
+  index: -1
+Effect/Electric8 (7)
+  rotate: true
+  xy: 248, 8
+  size: 259, 119
+  orig: 265, 125
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (8)
+  rotate: true
+  xy: 2, 3
+  size: 264, 122
+  orig: 270, 128
+  offset: 3, 3
+  index: -1
+Effect/Electric8 (9)
+  rotate: false
+  xy: 1367, 144
+  size: 268, 123
+  orig: 275, 129
+  offset: 4, 3
+  index: -1
+Symbol_1_border/Symbol_1_border_00000
+  rotate: false
+  xy: 369, 8
+  size: 6, 10
+  orig: 249, 110
+  offset: 6, 15
+  index: -1
+Symbol_1_border/Symbol_1_border_00001
+  rotate: true
+  xy: 1637, 223
+  size: 44, 74
+  orig: 249, 110
+  offset: 2, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00002
+  rotate: false
+  xy: 610, 4
+  size: 76, 96
+  orig: 249, 110
+  offset: 2, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00003
+  rotate: false
+  xy: 921, 2
+  size: 110, 99
+  orig: 249, 110
+  offset: 2, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00004
+  rotate: true
+  xy: 804, 126
+  size: 141, 99
+  orig: 249, 110
+  offset: 4, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00005
+  rotate: true
+  xy: 703, 103
+  size: 164, 99
+  orig: 249, 110
+  offset: 14, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00006
+  rotate: true
+  xy: 602, 102
+  size: 165, 99
+  orig: 249, 110
+  offset: 46, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00007
+  rotate: false
+  xy: 758, 2
+  size: 161, 99
+  orig: 249, 110
+  offset: 79, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00008
+  rotate: true
+  xy: 905, 137
+  size: 130, 99
+  orig: 249, 110
+  offset: 112, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00009
+  rotate: false
+  xy: 1572, 43
+  size: 99, 99
+  orig: 249, 110
+  offset: 145, 8
+  index: -1
+Symbol_1_border/Symbol_1_border_00010
+  rotate: false
+  xy: 688, 7
+  size: 68, 93
+  orig: 249, 110
+  offset: 178, 14
+  index: -1
+Symbol_1_border/Symbol_1_border_00011
+  rotate: true
+  xy: 905, 103
+  size: 32, 45
+  orig: 249, 110
+  offset: 212, 60
+  index: -1
+Symbol_2/Symbol_2_A
+  rotate: true
+  xy: 477, 2
+  size: 67, 64
+  orig: 68, 65
+  offset: 0, 1
+  index: -1
+Symbol_2/Symbol_2_B
+  rotate: true
+  xy: 1637, 159
+  size: 62, 65
+  orig: 64, 66
+  offset: 1, 1
+  index: -1
+Symbol_2/Symbol_2_R
+  rotate: false
+  xy: 543, 3
+  size: 65, 66
+  orig: 66, 67
+  offset: 0, 1
+  index: -1
+Symbol_2/Symbol_2_border
+  rotate: true
+  xy: 369, 20
+  size: 247, 106
+  orig: 249, 110
+  offset: 1, 2
+  index: -1

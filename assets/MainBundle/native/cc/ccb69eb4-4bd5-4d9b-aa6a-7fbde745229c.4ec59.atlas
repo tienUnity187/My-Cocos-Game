@@ -1,0 +1,20 @@
+
+anim-sym-7x2.png
+size: 281,189
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Symbol/Back
+  rotate: false
+  xy: 2, 2
+  size: 138, 185
+  orig: 141, 187
+  offset: 2, 1
+  index: -1
+Symbol/Symbol_11
+  rotate: false
+  xy: 142, 2
+  size: 137, 185
+  orig: 141, 187
+  offset: 2, 1
+  index: -1

@@ -1,0 +1,48 @@
+
+anim-jp-mini.png
+size: 1258,791
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+JACKPOT
+  rotate: true
+  xy: 1192, 409
+  size: 380, 64
+  orig: 380, 64
+  offset: 0, 0
+  index: -1
+JackpotUI_BG
+  rotate: true
+  xy: 884, 124
+  size: 665, 170
+  orig: 764, 232
+  offset: 39, 0
+  index: -1
+Layer 8
+  rotate: false
+  xy: 884, 2
+  size: 175, 120
+  orig: 192, 134
+  offset: 8, 11
+  index: -1
+MINI
+  rotate: true
+  xy: 1056, 378
+  size: 411, 134
+  orig: 411, 134
+  offset: 0, 0
+  index: -1
+Symbol_22-topaz-enhance-4x
+  rotate: true
+  xy: 1056, 160
+  size: 216, 154
+  orig: 234, 165
+  offset: 0, 10
+  index: -1
+blackhole
+  rotate: false
+  xy: 2, 9
+  size: 880, 780
+  orig: 888, 854
+  offset: 8, 32
+  index: -1
