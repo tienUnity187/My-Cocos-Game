@@ -8,7 +8,7 @@ System.register([], function (_export, _context) {
     execute: function () {
       _export("Application", Application = class Application {
         constructor() {
-          this.settingsPath = 'src/settings.bb7de.json';
+          this.settingsPath = 'src/settings.e0363.json';
           this.showFPS = false;
         }
         init(engine) {
