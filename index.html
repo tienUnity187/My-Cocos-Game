@@ -1,140 +1,203 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en-us">
 
-    <title>SuperNova</title>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>NiuSexyCardCutting</title>
+	
+	<link rel="stylesheet" href="Template/style.css"/>
+	<!--START_DIAGNOSTICS-->
+	<link rel="stylesheet" href="Template/diagnostics.css">
+	<!--END_DIAGNOSTICS-->
+    
+    <link rel="preload" href="Build/f587c2cd63ce444e92465ea63e410009.data" as="fetch" type="application/octet-stream" crossorigin>
+    <link rel="preload" href="Build/fa16d770e10a81fe32f7bc1608bfa329.js" as="script">
+    <link rel="preload" href="Build/36d07a944d1bd9816bc5de38ffb2d2db.wasm" as="fetch" type="application/wasm" crossorigin>
+</head>
 
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1,minimal-ui=true"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="mobile-web-app-capable" content="yes"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="screen-orientation" content="portrait"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="360-fullscreen" content="true"/>
+<body style="background-color: #000000; text-align: center;">
 
-    <meta name="renderer" content="webkit"/>
-    <meta name="force-rendering" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<div class="gameCanvas" style="width: 100%; height: 100%;">
+		<div id="gameContainer">
+			<canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
+		</div>
+	</div>
 
-    <link rel="stylesheet" type="text/css" href="./style.ad77d.css"/>
+	
+	<div class="browserBackground" style="width: 100%; height: 100%;">
+	</div>
+	
+	<div id="loader">
+	  <div class="browserCanvas1" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+		
+		<!-- 로고 이미지 -->
+		<img src="Template/logo.gif" class="companyLogo">
+		<!-- 프로그레스 바 -->
+		<div class="progressBar" style="display: &&& showProgressBar &&&">
+			<p id="loadingText" class="loadingText"></p>
+			<img class="progressBarIamge" id="progressBarIamge" src="Template/progressbar.png">
+			<div class="full"></div>
+		</div>
+		<!-- 로딩 텍스트 -->
+		<p class="progressText" style="display: &&& showProgressText &&&;"></p>
+		<!-- 로고 텍스트 이미지 -->
+		<img src="Template/logo_text.png" class="companyLogoText">
 
-    <style>
-      html { overflow: hidden; width: 100%; height: 100%; }
-      body {
-        position: fixed !important; top: 0 !important; left: 0 !important;
-        width: 100% !important; height: 100% !important;
-        padding: 0 !important; border: 0 !important; margin: 0 !important;
-        overflow: hidden !important; background-color: #000 !important;
-        display: flex !important; justify-content: center !important; align-items: center !important;
-      }
-      .header, .footer { display: none !important; }
-      #GameDiv { overflow: hidden !important; flex-shrink: 0 !important; border: none !important; border-radius: 0 !important; box-shadow: none !important; }
-      #Cocos3dGameContainer, #GameCanvas { width: 100% !important; height: 100% !important; }
+	  </div>
+	</div>
+	
+	<div class="browserCanvas2" style="width: 100%; height: 100%;">
+		<div id="footer" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; bottom: 0px;position: absolute;margin: auto; width: 100%;pointer-events: all;">
+		</div>
+	</div>
+	
+	<div class="bodyFooter" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; bottom: 0px;position: absolute;margin: auto; width: 100%;">
+		<p id="version" style="color: rgba(213,173,98,1.00);"></p>
+	</div>
+	
+	<!--START_DIAGNOSTICS-->
+	<div id="unity-footer">
+		<img id="diagnostics-icon" src="Template/webmemd-icon.png">
+	</div>
+	<!--END_DIAGNOSTICS-->
+	
+<!--
+	<button title="Enter fullscreen" id="fullscreenButton" onclick="toggle_fullscreen()"
+					style="width: calc(var(--agw)*8); height: calc(var(--agw)*8); position: absolute; bottom: 0px; right: 0px; margin: 1.5vw; font-size: 16px; display: &&& showFullscreenButton &&&; transition: opacity 0.4s ease 0s; background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%; padding: 0px; border: 0px none; cursor: pointer; appearance: button; text-rendering: auto; letter-spacing: normal; word-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none; text-align: center; align-items: flex-start; box-sizing: border-box; pointer-events: all;">
+			<img src="Template/fullscreenON.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;">
+	</button>
+-->
 
-      /* ── HTML Loading Overlay ──────────────────────────────────────────────
-         Overlay này hiển thị TRƯỚC khi Cocos engine khởi động.
-         Ảnh được đặt cùng thư mục với index.html:
-           - loading-gif.gif   : logo dạng animation (GIF)
-           - loading-logo.png  : logo tĩnh (PNG), thường đặt phía dưới hoặc trên GIF
+	<!--
+        <button title="Enter fullscreen" id="fullscreenButton" onclick="toggle_fullscreen()">
+                <img id="fullscreen" src="Template/fullscreenON.png">
+        </button>
+-->
 
-         ĐỂ THAY ẢNH: đối tác chỉ cần thay 2 file này, không cần sửa code.
-         Khi Cocos loading xong, overlay tự ẩn mượt (CSS transition 0.5s).
-      ───────────────────────────────────────────────────────────────────── */
-      #sn-loading-overlay {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: transparent;
-        transition: opacity 0.5s ease;
-        pointer-events: none;
-      }
-      #sn-loading-overlay.hidden {
-        opacity: 0;
-        /* Xóa khỏi DOM sau khi transition kết thúc (xem JS bên dưới) */
-      }
-      #sn-loading-overlay img { opacity: 0; object-fit: contain; }
-    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script type="text/javascript">
-      (function () {
-        /* ── Responsive GameDiv ─────────────────────────────────── */
-        var R_LAND = 16 / 9, R_PORT = 9 / 16;
-        function fit() {
-          var vw = window.innerWidth, vh = window.innerHeight, w, h;
-          var R = vh > vw ? R_PORT : R_LAND;
-          if (vw / vh > R) { h = vh; w = Math.round(vh * R); }
-          else { w = vw; h = Math.round(vw / R); }
-          var d = document.getElementById('GameDiv');
-          if (d) { d.style.width = w + 'px'; d.style.height = h + 'px'; }
-        }
-        document.addEventListener('DOMContentLoaded', fit);
-        window.addEventListener('resize', fit);
-        window.addEventListener('orientationchange', function () { setTimeout(fit, 200); });
+<script src="Build/Build_12021942607031521.loader.js"></script>
+<script>
+	
+	var applicationInstance;
+    var unityInstantiated = false;
 
-        /* ── Hide loading overlay ───────────────────────────────────
-           Được gọi từ LoadingController._onLoadComplete() (Cocos script)
-           thông qua: window.snHideLoadingOverlay?.()
-        ─────────────────────────────────────────────────────────── */
-        window.snHideLoadingOverlay = function () {
-          var overlay = document.getElementById('sn-loading-overlay');
-          if (!overlay) return;
-          overlay.style.transition = 'none';
-          overlay.style.opacity = '0';
-          overlay.classList.add('hidden');
-          overlay.addEventListener('transitionend', function () {
-            if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
-          }, { once: true });
-          /* fallback nếu transition không fire (display:none parent, v.v.) */
-          setTimeout(function () {
-            if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
-          }, 800);
-        };
-      }());
-    </script>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20version%3D%221.2%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%3E%09%3Cdefs%3E%20%3Cimage%20width%3D%2249%22%20height%3D%2241%22%20id%3D%22img1%22%20href%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAADEAAAApCAYAAACcGcHqAAAAAXNSR0IB2cksfwAADrNJREFUeJytWQl0nNV1vu%2F92yyaRRotaLFkLMnxgo1BdhNkSFKfQmnJfjiHQJsTwiE4EFLHJm5MylI7jUmcOE2KY7ADPSGkgdJQmiY9bU1KEyAmxmAibIMxtiVbFpZG0mj2mX97r%2Ff9y8xYlrAc%2Bs75Z%2F7lvfff7757v3vv%2B%2BXRnqV9lJLLZFkKEUKBEAJEovhDuDgFSrm4D%2BICb%2BM1diFc%2FIPoRqm4B34fkKh7T8JxVAIii36Scx8kGQ%2BJ40Hc5zIBBe%2BpCpBIRCeRuhTOVcQJRhnAGUYgpW3YUILzNNk0jCjncC1w%2FqeU0LCQgzpgoCK4KyC4AKkHyDsnHhDiDPTBukCID8i7BlnyzqUqWFkGoihAcwWAcNgCVc2SeHSABoOvUlk5bO7Y%2Bd%2BckqR6x%2B1sVhCnk5O%2FURkclQn9Gk63FoSOUBAKLghwQIkl8UA4h3tOPeFpBZQL4KxrVAClVcBAqsChogAPtCIrJBBISImGNaQRj0RClzrbf8Ul6Rnz4V3PKV9YOzgjiCvKKYFw5ICa%2BDIBfhqn%2BiQHuJyhHgE4oOEAIxU83uGC5LiEonEPsOgLjAN3rREfiEHeP592LYZwbwzxpMGxUNaBjSUBJiYR2AmNnBy%2Bjr6v589pomHEenj35y1mP6eXDCN217oqCP%2FkcmPSPKDW75KADqFU21CODvEy8T5akRQ8IdxLIRdxHglhuCujd4dzd8XAg8mBVIZ7XaoX3J%2Fc6829R%2BIkOQ7MMAld1NtBOjs2oJIHNUU%2Bjk%2Btc0C4QKZSB9SGfwNHbvIIQghU3kG8N3P3n3maFP%2BUeEJXHzvdxUoR7OCsjJhEaJp6wvEaTTgvcc%2FFGFp57o1Jp4EdfAPQzK6SNO0eCvw72HtgRhAukJRgg396TU2sRm65mTASFNI5mqFQ8RXxIiGYsH%2FfUrinRsfJK2ZC%2FMXwBnu6qBlEnJVjnnlxDzxz52OOmoDkC8Bfez1AL1t%2BI96x0hs33RL%2F9jf5jCD8hh3bxUpQz1z81XdWwFsJYSRoo2B7q0KZ58yMnO3w%2FiERx9xc58eXI0tpSK8KUq%2BEzs097Tur5tuvvyJCpmwOSCYrQTD4flWRNbxVfncQnL%2FPtWp3At%2Baapt4aZGzk6eN4s8szvO%2B2QP47OawGKkQgstyXJAvskaDTEi3RuWVAUWJz2tvpTEtUBHa9YuqWTlKFKsxmgTS1Ngpm1Yb3joxK4hfqvVxRNHLPJk8V3X%2BKfiWQiAgy7xZln4fD4Xu7U0OnTcoTW97lDA1LHOBzkufKpb0%2B3uWLgw11IWAFHV8CfOW3TNH75%2BPj2MAxcDMWc%2B7gghy3o6OSoX9OKwphHepp2JWnIjAKxtUliYGZXdZL7RdYxbE1Md%2BTet2gWFen06lV0US9aAVylWKqjEn5%2B2GiUZUFlYQ8ueZEYTC%2BWLuSexbJ6%2FlfXCdWdPUcYxkh68ZPsJnmmeu7cMsn%2FmtHHu6lMpcWjAsVRMRvZahuOuJ5UIJymhSkYBKiKxUFDezT3C%2Bigm2qEQhj1wEBuaurOOQqjLCCNn%2FXgD4Lagoo2iqJsqsopfjGXPo1UZ2KpXKkM3kIDU2AQ1d7RDO5w0EUYne54B4KtAoEcNoqy5gNVAxj1LFXQUTN0wXMkymw%2F8fIGRK43IwJGt1dcBzeUeBls0gh%2BcT45Ogl3RHkyoqj9r2FGM8NSuIqGXGUNhWCq7pcCdqcy%2BAkUrgkzFxQ0Sn0piyvFcAxxPzVJvxa6Kd7WoIX2DqBmRQ%2BEKhCMVcEWzLpRg1pEEoEODEMPcXCZkdhGIzdGpoZ36A8yOw91zkRMjqDrfj%2Ff2Ljg5Y0%2BeYa0suvISSkrHMsqzbpeama7llkjMDh2AqmQLbrklauWsR0WgdqIwdtnKF3Y2vvWTPCgKljeCYSMWcuJ%2FgVXMlP5AhQ%2FxBq3Bi8eXQSHicMrbIUJVbmUQ%2FWjZNOnUqCcVs3vEFR3fVMOVkzOGAlmem%2BV%2ForYdq5zsLxA8izYTniy1oQk0VEMSnWO%2FcMSs3vTYIPzgXoY%2BtXA0x04hhsdKF6UQvRvU%2BXTf6pvLFhdlCcZ5h2VJx%2BAxmGLySKVc06NRlBOLRMKgcnjHKxnYmkeSsINqKpRjaRo8Coj%2BvBGjqpRuiiaJPHCK%2FbDt%2B6NSXe5c5xdtfYo3WFYl8PRRQr6JO4SCGcQUli3DLbrS4FC0USySXz5N0Kgv5YtkVdnoW4KU4flNkCi2xiGCvo1nLuL1z%2BO3CdCWdBUJjLIE5ULfPSAT8MsC98oI%2FVptUrMpeMaZgm3xfUZ%2B%2Fr6mla3Mu%2F1RicCIChn0T0mXMrTtcRhO5Edo%2BZJEudc%2FeZw4u1TRHQhOKB7SkQsj%2F2Mz%2BUefw8XMAnAMCx12M3rzUYaRKcsE97XA3ycPZFUotwvg%2BMeaHJ45AZ0PLmD45%2Fpmt87r0NVroOx8%2BePg3mAHfh30XS%2BhASJ9IBEgGWJ7Wh4KQwcKnaJ7LBz6PqKikgCIXVEk6qinSA4zbz2Fllp4R83QQqPUlqKMl1VxPZKuoxZpUW9TfqiwLjRzzx51KjZVipdKDmIc89%2BL8BVe%2Bee3Vn%2Fninmf346Bv4bDra%2B1GRVZrjqowjpG3iFTqlypCOSg8UySa0yTpF1if78YHBy%2BeGplV%2BBlBIIBuNIOGmkTYu89FRu%2BsBpUcR8sj4NHasZlSNq2m1cek0%2FIWmDf%2FR99as%2Ba%2BdXv3%2FnVMN7Mo40dR1CYvwXVMqzUeg6yuYzAuv8IYG0e%2FOoUrdhhZaMjQ5BdWTL6jn0%2F4mVcC%2BBLfdDicnXKItFusiruJQMYQ2Oj0yWzLfnx8IrnCtK2bF3R1d3%2B%2Fv3%2F7xt%2B%2B%2BKWIxX%2BJw%2B7DmVe47IPJI%2F62NNSD2tRwgGvqg5Hnf3W8MlF%2BruJPA%2FETCXNgm1WcmkM10tUyBtq2hav1DtLh5PTJUvmpVDwU%2FdpUKnXDEJWWze9c8Mi2%2FtW9Aau8edPLB15UCfwCvez9vmps3QgiuHVypO6ywg03%2FVn4n39avDDxp4EIMVaPgta7059tTtzzDQEFl7yEz0ZMAjPWD3WKeqbA7Lun0qltWjCktja3rjclLXbfBz7w4Pb9r1yvAN%2Fk%2BAlAiwg6xkQak0m1X2lsWKd%2F4Y6dTFaywR3fv6CsuAICY3gH0mGUelr3y1A%2Fk3VMQORMlGQYs9%2BeApjRZk9nJiAWij5smsZVo6Mjn1IUNVQfjd%2BGK7hs46pVd28dGLgnBvAyqmYzKqeLlXVijIzKtLFhvRSLYnYqPQkXmI9VQKCQPdyNa2eBEKCYB0aTnM2yCQT8xorkiVm1lSlm9Vg49m1D1%2FuGTh6fr%2FUsUYOB4Ie4TJ79mxXLPx8u6z954MiRvRqhj6KzfZAZFhiDw03BlqbNVFUW4xS3XjCIx2kd5dxayJ3QVGUj8AC4mxSYfmOxgnQ7ilZw4nwTI%2BO8hnM8ZJrm1lOnh6R5HV0Q1AJhRun3SrLc9sWlS3f%2F8K23PouEsQU7X22n0heZR46FlZ75n7Pu2vgi1jNPqN%2FdPieGckBozBal3oKq7UNN0kEqPiKCEJLUIKbq5zDT9JYr5YxIMPqPeHp1Npf5E2QtaGlqBUuizRiJ%2FxaTvr5bFy%2Fe%2FsiRN9djJrYSi63vGUOnF9npLA1d0fcNsSNSvuPOfw%2Fs3JE637scEOikYZnDPD%2F5qpqTuzHgm5OKE2OKPnhxajgzFw3lStmJcKDuTsxaXhobe6c%2BHm%2FA0lcBm9I6xuiNTIbldy5b%2Fhfd8fCzG%2Fa%2BfLNsW49BaqpXP%2FxWm7aweweqrxOn2TInEMQNcAlX4zV5E1QyGZDd%2BCAevjkXAH5DMz0KXP4GrvD96B%2BR9vYuwUYYzCWsGewlac4fOwL8yR19Kx9dd%2BDVW%2FB9nzDfGV1LFTkqN8TWmTfc9KptWXsCTz9lzgpiF41KwEyxh9NY2RSAKsX6%2FuEkcUAynPG3LwREUS%2FzUCD8OCrlg4VC%2FmO4ItDS3ApMUcVmG8ES9NKyYfYeJnTelv7%2BbWsHfr%2FlomJpRB8a%2FoqdybZpbS1bKeNy%2BbqP%2FzrwHz%2Bf0QLkALeCqF6sqUkApoHwY7azNu4u3igeUxcCwhnP2ATmKv%2BJM36sUMxDWS%2BL7R6n6BEZss1YKF0oXB8NBQcf6et74u7nX3gCTKsZprI3qtHIIqKqdyLzCN94YUYQMmcX4f%2BVKGhddX%2FDz2CrfiHMSSaw%2FxDYExcKomSUmEaV3URRLjUN47Zk8gxta%2BsEWZIrW5ypXK65bBrbGmPR9ff2998sIWt9fd%2FvHtJHRnep9bE1OPYJffUffyTN7IGWl54%2Fi95lG3gzTrNCfLOpKak9Z3ahiCDnODXAwEcyZ2b9YvNuTWcm0xjdRKjUXioVr5uYGKOJRDPWDJL7bQP75IpFUiiV20zTfrSjqemhe69Y%2FS9b9%2F1urTGV%2BbQcDHxWUpR%2FiHF2V35l%2F%2Bt1r%2Byt0K9w7AiK3QY1awA1YERzNn8JQbxw5g8BUAFi6hlNDT2N%2FHBlPp%2BrD4XqQBzOJrLzUkHnNoyn0x3hUOi2WDgc%2Fealy7dsfP31HyPlliTg9%2BOqfQ5Nayf2rtTZQvsL8b%2B9llYrOxseLORxCBA6Rjg%2F%2BV5AOLNx9q9Yo19m2dZfTUwmSZMomNDJiZemi3fmSzZ5Y%2FDE%2FHgk8tVSa1vPXX2rvosDf%2FyDQwePYRmAlM3%2FLtN9yVfSlnWi6%2BQRJkAsAm9zsjbt4zUr45gT0HGbs%2FH3CgKFyaGj7wRCP2kYRmcul4FIJOb4h79pLH7FZ4nJdFoY2sc7WluXBWT5yTKzt8gMDmJV%2BUdgsQ11Nv977Pq2ANHh7sZwf%2FvZE74KSCVUbHIk8Thv9DxfMywdy1R1EM3iMVyVryLtYqGoQDhcJ8pf7wtNtU3lsrIsS72J%2BvpbvrTkkhea0hP%2Fe8%2FQ8B6JMZIzje5DjZ2j4gPsJg34A5LzXdPNlnxGElfivgLMSIN97Iri5HlLxbk00zJMRdI2Ywn6MwxkWrGYJ6FgyP2C6m5ac%2F%2BrBrNtSE6Oc2ENiXiDnoknAo1De0Td8cz6RIcz3%2F8B%2BKK%2FykWZFuMAAAAASUVORK5CYII%3D%22%2F%3E%09%3C%2Fdefs%3E%09%3Cstyle%3E%09%3C%2Fstyle%3E%09%3Cuse%20id%3D%22%EB%A0%88%EC%9D%B4%EC%96%B4%201%22%20href%3D%22%23img1%22%20x%3D%228%22%20y%3D%2212%22%2F%3E%3C%2Fsvg%3E">
-  <style>html{overflow:hidden;width:100%;height:100%}body{position:fixed!important;top:0!important;left:0!important;width:100%!important;height:100%!important;padding:0!important;border:0!important;margin:0!important;overflow:hidden!important;background-color:#000!important;display:flex!important;justify-content:center!important;align-items:center!important}.header,.footer{display:none!important}#GameDiv{overflow:hidden!important;flex-shrink:0!important;border:none!important;border-radius:0!important;box-shadow:none!important}#Cocos3dGameContainer,#GameCanvas{width:100%!important;height:100%!important}</style>
-<script type="text/javascript">(function(){var R_LAND=16/9,R_PORT=9/16;function fit(){var vw=window.innerWidth,vh=window.innerHeight,w,h;var R=vh>vw?R_PORT:R_LAND;if(vw/vh>R){h=vh;w=Math.round(vh*R);}else{w=vw;h=Math.round(vw/R);}var d=document.getElementById('GameDiv');if(d){d.style.width=w+'px';d.style.height=h+'px';}}document.addEventListener('DOMContentLoaded',fit);window.addEventListener('resize',fit);window.addEventListener('orientationchange',function(){setTimeout(fit,200);});}());</script>
-  <style>#sn-loading-overlay{position:fixed;inset:0;z-index:9999;background:transparent;pointer-events:none;transition:opacity 0.5s ease}#sn-loading-overlay.hidden{opacity:0}#sn-loading-gif,#sn-loading-logo{opacity:0;object-fit:contain}</style>
-  <script type="text/javascript">window.snHideLoadingOverlay=function(){var o=document.getElementById('sn-loading-overlay');if(!o)return;o.style.transition='none';o.style.opacity='0';o.classList.add('hidden');o.addEventListener('transitionend',function(){if(o.parentNode)o.parentNode.removeChild(o);},{once:true});setTimeout(function(){if(o.parentNode)o.parentNode.removeChild(o);},800);};</script>
-  </head>
-  <body>
-    <h1 class="header">SuperNova</h1>
+	var timestamp = new Date().getTime();
+	
+	//UNITY STUFF
+    var buildUrl = "Build";
+	var productVersion = "1.202.194.2607031521";
+	var productVersionNoDot = productVersion.replace(/\./g, "_");
+	
+    var loaderUrl = buildUrl + "/Build_12021942607031521.loader.js";
+    var config = {
+        dataUrl: buildUrl + "/f587c2cd63ce444e92465ea63e410009.data",
+        frameworkUrl: buildUrl + "/fa16d770e10a81fe32f7bc1608bfa329.js",
+        codeUrl: buildUrl + "/36d07a944d1bd9816bc5de38ffb2d2db.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "NewWorld",
+        productName: "NiuSexyCardCutting",
+        productVersion: productVersion,
+    };
+	
+	var container = document.querySelector("#gameContainer");
+    var canvas = document.querySelector("#unity-canvas");
+    var loader = document.querySelector("#loader");
+	
+	var script = document.createElement("script");
 
-    <!--
-      ★ HTML LOADING OVERLAY ★
-      Thay 2 file ảnh dưới đây để tuỳ chỉnh màn hình loading:
-        - loading-gif.gif   : logo animation (GIF), đặt cùng thư mục index.html
-        - loading-logo.png  : logo tĩnh (PNG), đặt cùng thư mục index.html
-      Thứ tự hiển thị: GIF ở trên, PNG ở dưới (có thể đảo hoặc bỏ 1 cái).
-    -->
-    <div id="sn-loading-overlay">
-      <img id="sn-loading-gif"  src="https://downloads.realreelsgaming.com/Icons/rrlogo.png"         alt="Loading" onerror="this.style.display='none'"/>
-      <img id="sn-loading-logo" src="https://downloads.realreelsgaming.com/Icons/rrlogo_text.png" alt="Logo"    onerror="this.style.display='none'"/>
-    </div>
-    <script type="text/javascript">(function(){var DW=1920,DH=1080,imgs={'sn-loading-gif':[960,714,375,292,1.5],'sn-loading-logo':[960,297.941,290,150,1]};function pos(){var vw=window.innerWidth,vh=window.innerHeight,R=vh>vw?9/16:16/9,cw,ch;if(vw/vh>R){ch=vh;cw=vh*R;}else{cw=vw;ch=vw/R;}var ox=(vw-cw)/2,oy=(vh-ch)/2;for(var id in imgs){var n=imgs[id],el=document.getElementById(id);if(!el)continue;var ew=n[2]/DW*cw*n[4],eh=n[3]/DH*ch*n[4],lx=ox+n[0]/DW*cw,ty=oy+(1-n[1]/DH)*ch;el.style.cssText='position:fixed;opacity:0;width:'+ew+'px;height:'+eh+'px;left:'+lx+'px;top:'+ty+'px;transform:translate(-50%,-50%);object-fit:contain;max-width:none;max-height:none;';}}pos();window.addEventListener('resize',pos);window.addEventListener('orientationchange',function(){setTimeout(pos,200);});}());</script>
+	var companyName = config.companyName;
+	var productName = config.productName;
+	
+	<!--START_DIAGNOSTICS-->
+	var diagnostics_icon = document.getElementById("diagnostics-icon");
+	diagnostics_icon.style.position = "fixed";
+	diagnostics_icon.style.top = "10px";
+	diagnostics_icon.style.left = "0px";
+	canvas.after(diagnostics_icon);
+	<!--END_DIAGNOSTICS-->
 
-    <div id="GameDiv" cc_exact_fit_screen="false">
-      <div id="Cocos3dGameContainer">
-        <canvas id="GameCanvas" width="1920" height="1080" tabindex="99"></canvas>
-      </div>
-    </div>
+	document.title = productName;
+	document.querySelector("#version").textContent = productName+" v"+productVersion;
+	
+	loader.querySelector(".full").style.transform = "scaleX(" + 0 + ")";
+	
+	script.src = loaderUrl;
+	script.onload = () => {
+	
+		const url = new URL(window.location.href);
+		let glValue = url.searchParams.get('gl');
 
-    <p class="footer">
-      Created with <a href="https://www.cocos.com/products" title="Cocos Creator">Cocos Creator</a>
-    </p>
+		if (!["en","ko", "es", "pt"].includes(glValue)) {
+		  glValue = "en";
+		}
 
-    <!-- Polyfills bundle. -->
-    <script src="src/polyfills.bundle.e60f8.js" charset="utf-8"> </script>
+		const loadingMessages = {
+		  en: "The initial launch may take longer to load.",
+		  ko: "최초 실행시에는 로딩이 길어질 수 있습니다.",
+		  es: "El primer inicio puede tardar más en cargar.",
+		  pt: "O carregamento na primeira execução pode demorar mais."
+		};
 
-    <!-- SystemJS support. -->
-    <script src="src/system.bundle.543e6.js" charset="utf-8"> </script>
+		document.getElementById("loadingText").innerHTML = loadingMessages[glValue];
+	
+        createUnityInstance(canvas, config, (progress) => {
+			var dl_progress = progress * 2.5;
+			if (progress >= 1)
+			{
+			}
+			else if (dl_progress >= 0.85)
+			{
+				//loader.querySelector(".progressText").innerHTML = "Initializing...";
+				loader.querySelector(".full").style.transform = "scaleX(" + 1 + ")";
 
-    <!-- Import map -->
-    <script src="src/import-map.56174.json" type="systemjs-importmap" charset="utf-8"> </script>
+			}
+			else
+			{
+				//loader.querySelector(".progressText").innerHTML = Math.round(dl_progress * 100) + "%";
+				loader.querySelector(".full").style.transform = "scaleX(" + dl_progress + ")";
+			}
+        }).then((unityInstance) => {
 
-    <script>
-      System.import('./index.f6a24.js').catch(function (err) { console.error(err); });
-    </script>
-  </body>
+            applicationInstance = unityInstance;
+            unityInstantiated = true;
+
+            loader.querySelector(".progressBar").style.display = "none";
+            loader.querySelector(".progressText").style.display = "none";
+            loader.querySelector(".companyLogo").style.display = "none";
+            loader.querySelector(".companyLogoText").style.display = "none";
+            loader.querySelector(".browserCanvas1").style.backgroundColor = "transparent";
+            loader.querySelector(".browserCanvas1").style.pointerEvents = "none";
+			
+			document.getElementById("loadingText").style.display = "none";
+
+            document.querySelector("#footer").style.display = "none";
+            document.querySelector(".bodyFooter").style.display = "none";
+
+            document.querySelector(".browserCanvas2").style.pointerEvents = "none";
+
+			<!--START_DIAGNOSTICS-->
+			document.getElementById("diagnostics-icon").onclick = () => {
+				unityDiagnostics.openDiagnosticsDiv(applicationInstance.GetMetricsInfo);
+			};
+			<!--END_DIAGNOSTICS-->
+
+        }).catch((message) => {
+            alert(message);
+        });
+    };
+	document.body.appendChild(script);
+	
+</script>
+
+<script src="Template/app.js"></script>
+<!--START_DIAGNOSTICS-->
+<script src="Template/diagnostics.js"></script>
+<!--END_DIAGNOSTICS-->
+
+</body>
+
 </html>

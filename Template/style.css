@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+body {
+	background-color: #000000;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+	
+.TempTest {
+	transform: translate(0px, 40px) scale(15, 10);
+}
+
+.gameCanvas {
+	display: block;
+	position: fixed;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	top: 0pt;
+	bottom: 0px;
+	padding-top: auto;
+	padding-right: auto;
+	padding-bottom: auto;
+	padding-left: auto;
+}
+
+.browserCanvas1 {
+	display: block;
+	position: fixed;
+	width: 1024px;
+	height: 576px;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	top: 0pt;
+	bottom: 0px;
+}
+
+.browserCanvas2 {
+	display: block;
+	position: fixed;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	top: 0pt;
+	bottom: 0px;
+	pointer-events: none;
+}
+
+.progressText {
+	color: rgba(213,173,98,1.00);
+	letter-spacing: 1px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	text-align: center;
+	font-size: 29px;
+	font-weight: 700;
+	margin-top: 73px;
+	margin-bottom: 5px;
+	font-style: normal;
+	text-shadow: 2px 2px 2px rgba(111,109,98,1.00);
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+	position: fixed;
+	top: 200px;
+	bottom: auto;
+	left: 5px;
+	right: 5px;
+}
+
+.loadingText {
+	color: rgba(255,255,255,1.00);
+	letter-spacing: 1px;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 700;
+	font-style: normal;
+	height: auto;
+	width: 1000px;
+	left: -300px;
+	top: 10px;
+	align-items: center;
+	margin-right: auto;
+	margin-left: auto;
+	position: absolute;
+}
+
+.companyLogo_portraitMode {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	display: block;
+	position: absolute;
+	padding-right: 0px;
+	right: 5px;
+	bottom: calc(var(--agw)*5);
+	width: calc(var(--agw)*25);
+	height: auto;
+	left: 5px;
+}
+
+.companyLogoImage {
+	width: 100%;
+	display: block;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	position: static;
+}
+
+.progressBar {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 57.5%;
+	transform: translate(-50%, -50%);
+	border-radius: 9px;
+	}
+
+
+.progressBar .progressBarIamge {
+	transform: translate(0px, 55px) scale(.8, 0.56);
+	transform-origin: center; /* 기준점 설정 (옵션) */
+}
+
+.progressBar .full {
+	transform-origin: top left;
+	background: #ffffff;
+	background-position: 0px 0%;
+	background-repeat: repeat-x;
+	width: 79%;
+	height: 8px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	position: absolute;
+	top: 61px;
+	left: 43px;
+    border-width: medium;	
+	margin-top: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 10px 11px 12px 13px / 14px 14px 14px 14px;
+	}
+
+	.companyLogo {
+	width: auto;
+	max-width: 100%;
+	margin: 30px auto;
+	max-height: 290px;
+	position: absolute;
+	Top: 4%	
+	}
+
+	.companyLogoText {
+	margin: 40px auto;
+	width: 235px;
+	height: auto;
+	position: absolute;
+	Top: 64.5%;
+	}
+		
+	  #loader {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	  }
+	  
+	#fullscreenButton {
+		opacity: 0.4;
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	#fullscreenButton img {
+		display: block;
+		position: absolute; 
+		top: 50px; 
+		right: -50px; 
+		transform: translate(-50%, -50%); 
+		width: 100px;
+	}
+	
+	#fullscreenButton:hover
+	{
+		opacity: 1;
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+	}
+
+	#gameContainer {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-top: auto;
+	padding-right: auto;
+	padding-bottom: auto;
+	padding-left: auto;
+	top: 0pt;
+	bottom: 0px;
+	}
+
+	@media (max-width: 768px) {
+	  .browserCanvas1{
+		transform: scale(calc(0.17 * var(--agwww)));
+	  }
+	}
