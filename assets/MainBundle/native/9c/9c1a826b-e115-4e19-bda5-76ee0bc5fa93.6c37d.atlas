@@ -1,0 +1,104 @@
+
+electric(tablePay).png
+size: 1936,380
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+electric_00
+  rotate: true
+  xy: 1706, 101
+  size: 159, 147
+  orig: 445, 230
+  offset: 17, 65
+  index: -1
+electric_02
+  rotate: false
+  xy: 1433, 215
+  size: 244, 163
+  orig: 445, 230
+  offset: 13, 35
+  index: -1
+electric_04
+  rotate: false
+  xy: 1151, 201
+  size: 280, 177
+  orig: 445, 230
+  offset: 23, 18
+  index: -1
+electric_06
+  rotate: false
+  xy: 1054, 2
+  size: 296, 186
+  orig: 445, 230
+  offset: 36, 23
+  index: -1
+electric_08
+  rotate: false
+  xy: 1352, 10
+  size: 352, 189
+  orig: 445, 230
+  offset: 43, 24
+  index: -1
+electric_10
+  rotate: false
+  xy: 381, 190
+  size: 391, 188
+  orig: 445, 230
+  offset: 22, 27
+  index: -1
+electric_12
+  rotate: false
+  xy: 668, 2
+  size: 384, 186
+  orig: 445, 230
+  offset: 27, 30
+  index: -1
+electric_14
+  rotate: false
+  xy: 774, 190
+  size: 375, 188
+  orig: 445, 230
+  offset: 35, 24
+  index: -1
+electric_16
+  rotate: false
+  xy: 2, 178
+  size: 377, 200
+  orig: 445, 230
+  offset: 39, 15
+  index: -1
+electric_17
+  rotate: false
+  xy: 369, 18
+  size: 1, 1
+  orig: 1, 1
+  offset: 0, 0
+  index: -1
+electric_19
+  rotate: false
+  xy: 2, 3
+  size: 365, 173
+  orig: 445, 230
+  offset: 60, 14
+  index: -1
+electric_21
+  rotate: false
+  xy: 369, 21
+  size: 297, 155
+  orig: 445, 230
+  offset: 119, 23
+  index: -1
+electric_23
+  rotate: false
+  xy: 1679, 262
+  size: 255, 116
+  orig: 445, 230
+  offset: 144, 40
+  index: -1
+electric_25
+  rotate: false
+  xy: 1706, 19
+  size: 156, 80
+  orig: 445, 230
+  offset: 226, 56
+  index: -1

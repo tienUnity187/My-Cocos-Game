@@ -1,0 +1,146 @@
+
+anim-border-win.png
+size: 1658,585
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Borderwin_00
+  rotate: false
+  xy: 826, 4
+  size: 407, 117
+  orig: 426, 132
+  offset: 10, 9
+  index: -1
+Borderwin_01
+  rotate: false
+  xy: 1235, 2
+  size: 409, 118
+  orig: 426, 132
+  offset: 9, 10
+  index: -1
+Borderwin_02
+  rotate: false
+  xy: 416, 471
+  size: 411, 112
+  orig: 426, 132
+  offset: 8, 10
+  index: -1
+Borderwin_03
+  rotate: false
+  xy: 829, 470
+  size: 412, 113
+  orig: 426, 132
+  offset: 7, 9
+  index: -1
+Borderwin_04
+  rotate: false
+  xy: 2, 472
+  size: 412, 111
+  orig: 426, 132
+  offset: 7, 9
+  index: -1
+Borderwin_05
+  rotate: false
+  xy: 1243, 470
+  size: 413, 113
+  orig: 426, 132
+  offset: 7, 9
+  index: -1
+Borderwin_06
+  rotate: false
+  xy: 410, 123
+  size: 414, 115
+  orig: 426, 132
+  offset: 6, 8
+  index: -1
+Borderwin_07
+  rotate: false
+  xy: 1237, 122
+  size: 412, 115
+  orig: 426, 132
+  offset: 6, 8
+  index: -1
+Borderwin_08
+  rotate: false
+  xy: 412, 5
+  size: 412, 116
+  orig: 426, 132
+  offset: 7, 9
+  index: -1
+Borderwin_09
+  rotate: false
+  xy: 2, 357
+  size: 411, 113
+  orig: 426, 132
+  offset: 7, 8
+  index: -1
+Borderwin_10
+  rotate: false
+  xy: 415, 356
+  size: 409, 113
+  orig: 426, 132
+  offset: 8, 9
+  index: -1
+Borderwin_11
+  rotate: false
+  xy: 826, 355
+  size: 407, 113
+  orig: 426, 132
+  offset: 9, 10
+  index: -1
+Borderwin_12
+  rotate: false
+  xy: 826, 123
+  size: 409, 115
+  orig: 426, 132
+  offset: 7, 8
+  index: -1
+Borderwin_13
+  rotate: false
+  xy: 2, 6
+  size: 408, 115
+  orig: 426, 132
+  offset: 8, 8
+  index: -1
+Borderwin_14
+  rotate: false
+  xy: 415, 240
+  size: 409, 114
+  orig: 426, 132
+  offset: 9, 9
+  index: -1
+Borderwin_15
+  rotate: false
+  xy: 1235, 355
+  size: 409, 113
+  orig: 426, 132
+  offset: 9, 10
+  index: -1
+Borderwin_16
+  rotate: false
+  xy: 2, 242
+  size: 411, 113
+  orig: 426, 132
+  offset: 8, 9
+  index: -1
+Borderwin_17
+  rotate: false
+  xy: 826, 240
+  size: 410, 113
+  orig: 426, 132
+  offset: 8, 9
+  index: -1
+Borderwin_18
+  rotate: false
+  xy: 1238, 239
+  size: 407, 114
+  orig: 426, 132
+  offset: 10, 9
+  index: -1
+Borderwin_19
+  rotate: false
+  xy: 2, 126
+  size: 406, 114
+  orig: 426, 132
+  offset: 10, 10
+  index: -1
